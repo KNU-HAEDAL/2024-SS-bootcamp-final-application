@@ -11,7 +11,7 @@ from tkinter import ttk
 import time
 
 # 로그인 정보 설정
-with open('./secret.json') as f:
+with open("C:\\Users\\AERO\\Downloads\\haedal\\2024-SS-bootcamp-final-application\\python_tue\\NamHyunHo\\week5\\secret.json") as f:
     secrets = json.loads(f.read())
 LMS_ID = secrets["LMS_ID"]
 LMS_PASSWORD = secrets["LMS_PW"]
