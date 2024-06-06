@@ -11,8 +11,8 @@ from tkinter import ttk
 import time
 
 # 로그인 정보 설정
-LMS_ID = 'sjykol'
-LMS_PASSWORD = '051221sjy@'
+LMS_ID = ''
+LMS_PASSWORD = ''
 
 def infinite_scroll(driver, scroll_pause_time=1):
     last_height = driver.execute_script("return document.body.scrollHeight")
