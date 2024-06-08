@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator_hdal.CalculatorController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+    <Label fx:id="displayLabel" GridPane.columnSpan="4" GridPane.rowIndex="0" />
+
+    <!-- 루트 함수, 로그 함수, 지수 함수 버튼 추가 -->
+    <Button onAction="#handleRootClick" text="√" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <Button onAction="#handleLogClick" text="log" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Button onAction="#handleExpClick" text="^" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+    <!-- 기존 FXML 코드 -->
+
+    <!-- 숫자 버튼 -->
+    <Button onAction="#handleButtonClick" text="7" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <Button onAction="#handleButtonClick" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Button onAction="#handleButtonClick" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <Button onAction="#handleOperatorClick" text="/" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+    <Button onAction="#handleButtonClick" text="4" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <Button onAction="#handleButtonClick" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Button onAction="#handleButtonClick" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    <Button onAction="#handleOperatorClick" text="*" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+    <Button onAction="#handleButtonClick" text="1" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <Button onAction="#handleButtonClick" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Button onAction="#handleButtonClick" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <Button onAction="#handleOperatorClick" text="-" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+
+    <Button onAction="#handleButtonClick" text="0" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <Button onAction="#handleButtonClick" text="." GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <Button onAction="#handleEqualsClick" text="=" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+    <Button onAction="#handleOperatorClick" text="+" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+
+    <columnConstraints>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+    </rowConstraints>
+</GridPane>
+
+
+
+<!--위의 코드는 JavaFX에서 사용되는 FXML 파일의 예시입니다. 이 파일은 JavaFX 애플리케이션의 UI 레이아웃을 정의하는 데 사용됩니다. 각 요소는 JavaFX 라이브러리의 클래스와 연결되어 있으며, 해당 클래스의 속성을 설정하거나 이벤트를 처리할 수 있습니다.-->
+
+<!--        아래는 이 FXML 파일의 주요 구성 요소에 대한 설명입니다:-->
+
+<!--        1. `<?xml version="1.0" encoding="UTF-8"?>`: XML 선언부로, 파일의 버전과 인코딩을 지정합니다.-->
+
+<!--        2. `<?import ... ?>`: FXML 파일에서 사용할 JavaFX 클래스를 import하는 부분입니다. 여기서는 `javafx.geometry.*`, `javafx.scene.control.*`, `javafx.scene.layout.*` 패키지의 클래스를 import하고 있습니다.-->
+
+<!--        3. `<GridPane>`: `GridPane`은 JavaFX에서 그리드 형태의 레이아웃을 만드는 데 사용되는 컨테이너입니다. `alignment`, `hgap`, `vgap` 등의 속성을 설정하여 요소들을 정렬하고 간격을 조절할 수 있습니다.-->
+
+<!--4. `<Label>`: `Label` 요소는 텍스트를 표시하는 데 사용됩니다. `fx:id` 속성을 통해 컨트롤러 클래스에서 이 요소를 식별할 수 있습니다.-->
+
+<!--    5. `<Button>`: `Button` 요소는 버튼을 표시하는 데 사용됩니다. `onAction` 속성을 통해 버튼이 클릭되었을 때 실행될 이벤트 핸들러를 지정할 수 있습니다.-->
+
+<!--        6. `<padding>`, `<columnConstraints>`, `<rowConstraints>`: 그리드 레이아웃의 패딩, 열 제약 조건, 행 제약 조건을 설정하는 요소입니다.-->
+
+<!--            7. `fx:controller`: FXML 파일과 연결된 컨트롤러 클래스를 지정하는 속성입니다.-->
+
+<!--            이 FXML 파일은 계산기 애플리케이션의 UI를 정의하고 있습니다. 그리드 레이아웃을 사용하여 숫자 버튼과 연산자 버튼이 표시되며, 이들 버튼이 클릭되었을 때 컨트롤러 클래스에 정의된 메서드가 실행됩니다. 또한 결과를 표시하기 위한 라벨(Label)도 정의되어 있습니다.-->
