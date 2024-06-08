@@ -1,0 +1,10 @@
+package haedal.selenium;
+
+import lombok.Data;
+
+@Data
+public class KNUNotice {
+    private String title;
+    private String writer;
+    private String date;
+}
