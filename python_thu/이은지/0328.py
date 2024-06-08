@@ -26,7 +26,7 @@ window.geometry('400x400+800+300') #위치를 직접 지정 너비x높이+
 window.resizable(0,0) #사이즈 조정을 막음 ;True값으로 하면 조정가능 False는 불가
 
 #아이콘넣기
-window.iconbitmap("C:/Users/82108/Desktop/24_python/bootcamp/notepad-icon_34386.ico") #역슬래시 대신 / , 주소+아이콘명+확장자까지 적기
+window.iconbitmap("C:/Users/82108/Desktop/haedal_bootcamp/notepad-icon_34386.ico") #역슬래시 대신 / , 주소+아이콘명+확장자까지 적기
 
 #텍스트창만들기
 text_area = Text(window)
