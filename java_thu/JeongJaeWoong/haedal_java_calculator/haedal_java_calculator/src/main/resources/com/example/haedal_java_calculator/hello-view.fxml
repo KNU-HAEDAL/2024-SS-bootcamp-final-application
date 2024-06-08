@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.haedal_java_calculator.CalculatorController">
+  <padding>
+    <Insets bottom="20" left="20" right="20" top="20" />
+  </padding>
+
+  <Label fx:id="displayLabel" GridPane.columnSpan="4" />
+
+  <!-- 숫자 버튼 -->
+  <Button onAction="#handleButtonClick" text="7" textFill="#f20000" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+  <Button contentDisplay="BOTTOM" onAction="#handleButtonClick" text="8" textFill="#170505" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+  <Button onAction="#handleButtonClick" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+  <Button onAction="#handleOperatorClick" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+  <Button onAction="#handleButtonClick" text="4" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+  <Button onAction="#handleButtonClick" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+  <Button onAction="#handleButtonClick" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+  <Button onAction="#handleOperatorClick" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+  <Button onAction="#handleButtonClick" text="1" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+  <Button onAction="#handleButtonClick" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+  <Button onAction="#handleButtonClick" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+  <Button onAction="#handleOperatorClick" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+  <Button onAction="#handleButtonClick" text="0" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+  <Button onAction="#handleButtonClick" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+  <Button onAction="#handleEqualsClick" text="=" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+  <Button onAction="#handleOperatorClick" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+  <columnConstraints>
+    <ColumnConstraints />
+    <ColumnConstraints />
+    <ColumnConstraints />
+    <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints />
+    <RowConstraints />
+    <RowConstraints />
+    <RowConstraints />
+    <RowConstraints />
+  </rowConstraints>
+</GridPane>
