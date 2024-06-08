@@ -1,0 +1,58 @@
+package haedal.selenium;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.HashMap;
+import java.util.*;
+
+/**
+ * @NoArgsConstructor : 기본 생성자를 생성해주는 어노테이션
+ * Lombok이라는 녀석이 제공.
+ * 이걸 사용하면
+ * public KNURepository(){} 라는 코드를 작성하지 않아도 알아서 만들어줌
+ *
+ *
+ * @Getter : Getter를 생성해주는 어노테이션
+ * Lombok이라는 녀석이 제공.
+ * 이걸 사용하면
+ * public String getKnuStorage(){return insatance} 라는 코드를 작성하지 않아도 알아서 만들어줌
+ *
+ */
+@NoArgsConstructor
+public class KNURepository {
+
+    //private로 사용하는 이유 => 저장소를 하나만 유지하기 위해서.
+    private Map<String, KNUNotice> knuStorage = new HashMap<>();
+
+    // 나머지 녀석들은 KNURepository라는 객체에서 받아서 사용해야함.
+    // 이러한 방식을 싱글톤 패턴이라고 함.
+    @Getter
+    private static final KNURepository instance = new KNURepository();
+
+    public void addNotice(KNUNotice notice){
+        knuStorage.put(notice.getTitle(), notice);
+    }
+
+    
+    //출력을 한 번 해보자구요.
+    public List<String> getAllNoticeAsList(){
+        List<String> noticeList = new ArrayList<>();
+        for(KNUNotice notice : knuStorage.values()){
+            String temp = "제목 : " + notice.getTitle() + "\n"
+                    + "작성자 : " + notice.getWriter() + "\n"
+                    + "작성일 : " + notice.getDate();
+            noticeList.add(temp);
+        }
+
+        return noticeList;
+    }
+
+    public List<KNUNotice> getAllNotice(){
+        List<KNUNotice> re = new ArrayList<>();
+        for(KNUNotice notice : knuStorage.values()){
+            re.add(notice);
+        }
+        return re;
+    }
+}
