@@ -65,7 +65,7 @@ tkt.Label(root,border = 3, relief ="sunken", text = "sunken&borderwidth = 3")
 
 # 아이콘 설정
 # photo = tkt.PhotoImage(file="C:/Study/해달/부트캠프/2024-1-파이썬응용/2주차/윈도우계산기아이콘.png")
-photo = tkt.PhotoImage(file="C:/Users/82108/Desktop/24_python/bootcamp/윈도우계산기아이콘.png")
+photo = tkt.PhotoImage(file="C:/Users/82108/Desktop/haedal_bootcamp/윈도우계산기아이콘.png")
 root.iconphoto(False, photo)
 
 # 엔트리 생성 (한줄 텍스트)
